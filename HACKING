@@ -5,7 +5,7 @@ Summary
   `./parse-sass.sh` when you have the required software installed, as described below)
 * To be able to use the latest/adequate version of sass, install ruby, gem, sass & bundle.
   On Fedora F20, this is done with `sudo dnf install rubygems && gem install bundle && bundle install`
-  from the same directory this README resides in.
+  from the same directory this HACKING resides in.
 
 How to tweak the theme
 ----------------------
