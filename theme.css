@@ -3,32 +3,28 @@
 % License, v. 2.0. If a copy of the MPL was not distributed with this
 % file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
-
 /* devedition.css is loaded in browser.xul after browser.css when it is
    preffed on.  The bulk of the styling is here in the shared file, but
    there are overrides for each platform in their devedition.css files. */
-
 :root {
   --tab-toolbar-navbar-overlap: 0px;
   --navbar-tab-toolbar-highlight-overlap: 0px;
   --space-above-tabbar: 0px;
   --toolbarbutton-text-shadow: none;
-  --backbutton-urlbar-overlap: 0px;
-}
+  --backbutton-urlbar-overlap: 0px; }
 
 :root[devtoolstheme="dark"] {
   /* Chrome */
   --chrome-background-color: #272b35;
   --chrome-color: #F5F7FA;
   --chrome-secondary-background-color: #393F4C;
-  --chrome-navigator-toolbox-separator-color: #{rgba(0,0,0,.2)};
-  --chrome-nav-bar-separator-color: #{rgba(0,0,0,.2)};
+  --chrome-navigator-toolbox-separator-color: rgba(0, 0, 0, 0.2);
+  --chrome-nav-bar-separator-color: rgba(0, 0, 0, 0.2);
   --chrome-nav-buttons-background: #252C33;
   --chrome-nav-buttons-hover-background: #1B2127;
   --chrome-nav-bar-controls-border-color: #1D2328;
   --chrome-selection-color: #fff;
   --chrome-selection-background-color: #5675B9;
-
   /* Tabs */
   --tabs-toolbar-color: #F5F7FA;
   --tab-background-color: #272b35;
@@ -36,17 +32,15 @@
   --tab-selection-color: #f5f7fa;
   --tab-selection-background-color: #5675B9;
   --tab-selection-box-shadow: none;
-  --pinned-tab-glow: #{radial-gradient(22px at center calc(100% - 2px), rgba(76,158,217,0.9) 13%, rgba(0,0,0,0.4) 16%, transparent 70%)};
-
+  --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), rgba(76, 158, 217, 0.9) 13%, rgba(0, 0, 0, 0.4) 16%, transparent 70%);
   /* Toolbar buttons */
-  --toolbarbutton-hover-background: #{rgba(25,33, 38,.6) linear-gradient(rgba(25,33,38,.6), rgba(25,33,38,.6)) padding-box};
+  --toolbarbutton-hover-background: rgba(25, 33, 38, 0.6) linear-gradient(rgba(25, 33, 38, 0.6), rgba(25, 33, 38, 0.6)) padding-box;
   --toolbarbutton-hover-boxshadow: none;
-  --toolbarbutton-hover-bordercolor: #{rgba(25,33,38,.6)};
-  --toolbarbutton-active-background: #{rgba(25,33,38,1) linear-gradient(rgba(25,33,38,1), rgba(25,33,38,1)) border-box};
+  --toolbarbutton-hover-bordercolor: rgba(25, 33, 38, 0.6);
+  --toolbarbutton-active-background: #192126 linear-gradient(#192126, #192126) border-box;
   --toolbarbutton-active-boxshadow: none;
-  --toolbarbutton-active-bordercolor: #{rgba(25,33,38,.8)};
+  --toolbarbutton-active-bordercolor: rgba(25, 33, 38, 0.8);
   --toolbarbutton-checkedhover-backgroundcolor: #3C5283;
-
   /* Url and search bars */
   --url-and-searchbar-background-color: #171B1F;
   --urlbar-separator-color: #5F6670;
@@ -57,67 +51,55 @@
   --urlbar-dropmarker-2x-url: url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
   --urlbar-dropmarker-2x-region: rect(0px, 11px, 14px, 0px);
   --urlbar-dropmarker-hover-2x-region: rect(0, 22px, 14px, 11px);
-  --urlbar-dropmarker-active-2x-region: rect(0px, 33px, 14px, 22px);
-}
+  --urlbar-dropmarker-active-2x-region: rect(0px, 33px, 14px, 22px); }
 
 :root[devtoolstheme="light"] {
-  $c: $bg_color;
-  $_hilight_color: _button_hilight_color($c);
-
-  --url-and-searchbar-background-color: #{$base_color};
-
-  --chrome-background-color: #{$bg_color};
-  --chrome-color: #{$fg_color};
-  --chrome-secondary-background-color: #{$bg_color};
-  --chrome-navigator-toolbox-separator-color: #{$borders_color};
-  --chrome-nav-bar-separator-color: #{$borders_color};
-  --chrome-nav-buttons-background: #{linear-gradient(to bottom, $c, darken($c, 4%) 60%, darken($c, 10%))}; /* --theme-body-background */
-  --chrome-nav-buttons-hover-background: #{linear-gradient(to bottom, lighten($c, 6%), $c 60%, darken($c, 4%))};
-  --chrome-nav-bar-controls-border-color: #{$borders_color};
-  --chrome-selection-color: #{$selected_fg_color};
-  --chrome-selection-background-color: #{$selected_bg_color};
-
-  --tab-background-color: #{$dark_fill};
-  --tab-hover-background-color: #{transparentize($bg_color, 0.8)};
-  --tab-selection-color: #{$fg_color};
-  --tab-selection-background-color: #{transparentize($bg_color, 0.5)};
-  --tab-selection-box-shadow: #{inset 0 3px $selected_bg_color};
-  --pinned-tab-glow: #{radial-gradient(22px at center calc(100% - 2px), $selected_bg_color 13%, transparent 16%)};
-
-
+  --url-and-searchbar-background-color: #ffffff;
+  --chrome-background-color: #e8e8e7;
+  --chrome-color: #2e3436;
+  --chrome-secondary-background-color: #e8e8e7;
+  --chrome-navigator-toolbox-separator-color: #b6b6b3;
+  --chrome-nav-bar-separator-color: #b6b6b3;
+  --chrome-nav-buttons-background: linear-gradient(to bottom, #e8e8e7, #dededd 60%, #cfcfcd);
+  /* --theme-body-background */
+  --chrome-nav-buttons-hover-background: linear-gradient(to bottom, #f7f7f7, #e8e8e7 60%, #dededd);
+  --chrome-nav-bar-controls-border-color: #b6b6b3;
+  --chrome-selection-color: #ffffff;
+  --chrome-selection-background-color: #4a90d9;
+  --tab-background-color: #cfcfcd;
+  --tab-hover-background-color: rgba(232, 232, 231, 0.2);
+  --tab-selection-color: #2e3436;
+  --tab-selection-background-color: rgba(232, 232, 231, 0.5);
+  --tab-selection-box-shadow: inset 0 3px #4a90d9;
+  --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), #4a90d9 13%, transparent 16%);
   /* Toolbar buttons */
-  --toolbarbutton-hover-background: #{linear-gradient(to bottom, lighten($c, 6%), $c 60%, darken($c, 4%))};
-  --toolbarbutton-hover-boxshadow: #{inset 0 1px _button_hilight_color(lighten($c, 6%))};
-  --toolbarbutton-hover-bordercolor: #{$borders_color $borders_color $alt_borders_color};
-  --toolbarbutton-active-background: #{darken($c, 6%)};
-  --toolbarbutton-active-boxshadow: #{inset 0 1px transparentize($_hilight_color, 1)};
-  --toolbarbutton-active-bordercolor: #{$borders_color};
-  --toolbarbutton-checkedhover-backgroundcolor: #{darken($c, 6%)};
-}
+  --toolbarbutton-hover-background: linear-gradient(to bottom, #f7f7f7, #e8e8e7 60%, #dededd);
+  --toolbarbutton-hover-boxshadow: inset 0 1px white;
+  --toolbarbutton-hover-bordercolor: #b6b6b3 #b6b6b3 #91918c;
+  --toolbarbutton-active-background: #d9d9d7;
+  --toolbarbutton-active-boxshadow: inset 0 1px rgba(255, 255, 255, 0);
+  --toolbarbutton-active-bordercolor: #b6b6b3;
+  --toolbarbutton-checkedhover-backgroundcolor: #d9d9d7; }
 
 /* Give some space to drag the window around while customizing
    (normal space to left and right of tabs doesn't work in this case) */
 #main-window[tabsintitlebar][customizing] {
-  --space-above-tabbar: 9px;
-}
+  --space-above-tabbar: 9px; }
 
 /* Override @tabCurveHalfWidth@ and @tabCurveWidth@.  XXX: Switch to a CSS variable once the perf is sorted out - bug 1088771 */
 .tab-background-middle {
   border-left-width: 0;
   border-right-width: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 .tab-background,
 .tabs-newtab-button {
   margin-inline-end: 0;
-  margin-inline-start: 0;
-}
+  margin-inline-start: 0; }
 
 .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
   padding-inline-end: 0;
-  padding-inline-start: 0;
-}
+  padding-inline-start: 0; }
 
 .tab-background-start[selected=true]::after,
 .tab-background-start[selected=true]::before,
@@ -125,67 +107,57 @@
 .tab-background-end,
 .tab-background-end[selected=true]::after,
 .tab-background-end[selected=true]::before {
-  width: 0;
-}
+  width: 0; }
 
 .tab-background-start[selected=true]::after,
 .tab-background-end[selected=true]::after {
-  margin-inline-start: 0;
-}
-/* End override @tabCurveHalfWidth@ and @tabCurveWidth@ */
+  margin-inline-start: 0; }
 
+/* End override @tabCurveHalfWidth@ and @tabCurveWidth@ */
 #urlbar ::-moz-selection,
 #navigator-toolbox .searchbar-textbox ::-moz-selection,
 .browserContainer > findbar ::-moz-selection {
   background-color: var(--chrome-selection-background-color);
-  color: var(--chrome-selection-color);
-}
+  color: var(--chrome-selection-color); }
 
 /* Change the base colors for the browser chrome */
-
 #tabbrowser-tabs,
 #TabsToolbar,
 #browser-panel {
   background: var(--chrome-background-color);
-  color: var(--chrome-color);
-}
+  color: var(--chrome-color); }
 
 #navigator-toolbox:-moz-lwtheme::after {
-  border-bottom-color: var(--chrome-navigator-toolbox-separator-color);
-}
+  border-bottom-color: var(--chrome-navigator-toolbox-separator-color); }
 
 #navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar),
 .browserContainer > findbar,
 #browser-bottombox {
   background-color: var(--chrome-secondary-background-color) !important;
   background-image: none !important;
-  color: var(--chrome-color);
-}
+  color: var(--chrome-color); }
 
 /* Default findbar text color doesn't look good - Bug 1125677 */
 .browserContainer > findbar .findbar-find-status,
 .browserContainer > findbar .found-matches {
-  color: inherit;
-}
+  color: inherit; }
 
 #navigator-toolbox .toolbarbutton-1,
 .browserContainer > findbar .findbar-button,
 #PlacesToolbar toolbarbutton.bookmark-item {
   color: var(--chrome-color);
-  text-shadow: var(--toolbarbutton-text-shadow);
-}
+  text-shadow: var(--toolbarbutton-text-shadow); }
 
 /* Using toolbar[brighttext] instead of important to override linux */
 toolbar[brighttext] #downloads-indicator-counter {
   text-shadow: var(--toolbarbutton-text-shadow);
-  color: var(--chrome-color);
-}
+  color: var(--chrome-color); }
 
 #TabsToolbar {
-  border-top-color: $alt_borders_color;
+  border-top-color: #91918c;
   text-shadow: none !important;
-  color: var(--chrome-color) !important; /* Make sure that the brighttext attribute is added */
-}
+  color: var(--chrome-color) !important;
+  /* Make sure that the brighttext attribute is added */ }
 
 /* URL bar and search bar*/
 #urlbar,
@@ -194,19 +166,16 @@ toolbar[brighttext] #downloads-indicator-counter {
   background-image: none !important;
   color: inherit !important;
   border: 1px solid var(--chrome-nav-bar-controls-border-color) !important;
-  box-shadow: none !important;
-}
+  box-shadow: none !important; }
 
 #urlbar {
   border-inline-start: none !important;
-  opacity: 1 !important;
-}
+  opacity: 1 !important; }
 
 window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   overflow: -moz-hidden-unscrollable;
   clip-path: none;
-  margin-inline-start: 0;
-}
+  margin-inline-start: 0; }
 
 /* Nav bar specific stuff */
 #nav-bar {
@@ -214,15 +183,13 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   border-top: none !important;
   border-bottom: none !important;
   border-radius: 0 !important;
-  box-shadow: 0 -1px var(--chrome-nav-bar-separator-color) !important;
-}
+  box-shadow: 0 -1px var(--chrome-nav-bar-separator-color) !important; }
 
 /* No extra vertical padding for nav bar */
 #nav-bar-customization-target,
 #nav-bar {
   padding-top: 0;
-  padding-bottom: 0;
-}
+  padding-bottom: 0; }
 
 /* Use smaller back button icon */
 /*
@@ -236,72 +203,61 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   }
 }
 */
-
 .tab-background {
-  visibility: hidden;
-}
+  visibility: hidden; }
 
 /* Tab separators */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
   background: currentColor;
-  opacity: 0 !important;
-}
+  opacity: 0 !important; }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
 .tabbrowser-arrowscrollbox > .scrollbutton-up {
   background-color: var(--tab-background-color);
-  border-color: transparent;
-}
+  border-color: transparent; }
 
 .tabbrowser-tab {
   /* We normally rely on other tab elements for pointer events, but this
      theme hides those so we need it set here instead */
-  pointer-events: auto;
-}
+  pointer-events: auto; }
 
 .tabbrowser-tab:-moz-any([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
 .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
   background-image: var(--pinned-tab-glow);
   background-position: center;
-  background-size: 100%;
-}
+  background-size: 100%; }
 
 .tabbrowser-tab[image] > .tab-stack > .tab-content[attention]:not([pinned]):not([selected="true"]) {
   background-position: left bottom var(--tab-toolbar-navbar-overlap);
-  background-size: 34px 100%;
-}
+  background-size: 34px 100%; }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):hover,
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):hover,
 .tabbrowser-tab:hover {
-  background-color: var(--tab-hover-background-color);
-}
+  background-color: var(--tab-hover-background-color); }
 
 .tabbrowser-tab[visuallyselected] {
-  color: var(--tab-selection-color) !important; /* Override color: inherit */
-  background-color: var(--tab-selection-background-color);
-}
+  color: var(--tab-selection-color) !important;
+  /* Override color: inherit */
+  background-color: var(--tab-selection-background-color); }
 
 .tab-icon-sound[soundplaying],
 .tab-icon-sound[muted] {
-  filter: url(chrome://browser/skin/filters.svg#fill) !important; /* removes drop-shadow filter */
-}
+  filter: url(chrome://browser/skin/filters.svg#fill) !important;
+  /* removes drop-shadow filter */ }
 
 /* Don't need space for the tab curves (66px - 30px) */
 .tabs-newtab-button {
-  width: 36px;
-}
+  width: 36px; }
 
 .tabs-newtab-button:hover {
   /* Important needed because !important is used in browser.css */
   background-color: var(--tab-hover-background-color) !important;
-  background-image: none;
-}
+  background-image: none; }
 
 :root {
-  --forwardbutton-width: 29px;
-}
+  --forwardbutton-width: 29px; }
 
 :root[devtoolstheme="light"] {
   --urlbar-dropmarker-url: url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
@@ -311,34 +267,30 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   --urlbar-dropmarker-2x-url: url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
   --urlbar-dropmarker-2x-region: rect(0px, 11px, 14px, 0px);
   --urlbar-dropmarker-hover-2x-region: rect(0, 22px, 14px, 11px);
-  --urlbar-dropmarker-active-2x-region: rect(0px, 33px, 14px, 22px);
-}
+  --urlbar-dropmarker-active-2x-region: rect(0px, 33px, 14px, 22px); }
 
 :root[devtoolstheme="dark"] .findbar-closebutton:not(:hover),
 :root[devtoolstheme="dark"] #sidebar-header > .close-icon:not(:hover),
 .tab-close-button[selected]:not(:hover) {
-/*
-  background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 80, 16, 64);
-  */
-}
+  /*
+    background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 80, 16, 64);
+    */ }
 
 /* The menubar and tabs toolbar should match the devedition theme */
 #TabsToolbar,
 #toolbar-menubar {
-  -moz-appearance: none !important;
-}
+  -moz-appearance: none !important; }
+
 #main-menubar {
-  color: var(--chrome-color);
-}
+  color: var(--chrome-color); }
+
 #main-menubar > menu:not([open]) {
-  color: inherit;
-}
+  color: inherit; }
 
 /* Allow buttons with -moz-appearance set to look normal on hover and open states */
 #navigator-toolbox .toolbarbutton-1:-moz-any(:hover, [open="true"]),
 #PlacesToolbar toolbarbutton.bookmark-item:-moz-any(:hover, [open="true"]) {
-  color: initial;
-}
+  color: initial; }
 
 /* Square back and forward buttons */
 /*
@@ -355,14 +307,12 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   border-inline-start: none;
 }
 */
-
 /* Override a box shadow for disabled back button */
 /*
 #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon {
   box-shadow: none !important;
 }
 */
-
 /*
 #back-button:hover:not([disabled="true"]) > .toolbarbutton-icon,
 #forward-button:hover:not([disabled="true"]) > .toolbarbutton-icon {
@@ -373,55 +323,39 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
   border-radius: 2px 0 0 2px !important;
 }
 */
-
 .urlbar-history-dropmarker {
   -moz-appearance: none;
   padding: 0 3px;
   list-style-image: var(--urlbar-dropmarker-url);
-  -moz-image-region: var(--urlbar-dropmarker-region);
-}
+  -moz-image-region: var(--urlbar-dropmarker-region); }
 
 /* Add the proper background for tab overflow */
 #alltabs-button,
 #new-tab-button {
-  background: var(--chrome-background-color);
-}
+  background: var(--chrome-background-color); }
 
 #new-tab-button:hover > .toolbarbutton-icon {
-  border-color: transparent !important;
-}
+  border-color: transparent !important; }
 
 /* Prevent double border below tabs toolbar */
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {
-  border-top-width: 0 !important;
-}
+  border-top-width: 0 !important; }
 
 /* Fix the bad-looking text-shadow in the sidebar header: */
 .sidebar-header,
 #sidebar-header {
-  text-shadow: none;
-}
+  text-shadow: none; }
 
 .ac-type-icon {
   /* Left-align the type icon in awesomebar popup results with the icon in the
      urlbar. */
-  margin-inline-start: 11px;
-}
-
+  margin-inline-start: 11px; }
 
 /* GNOME stuff */
-
 toolbar {
   padding: 3px;
-  border: 1px solid $borders_color;
-  border-width: 1px 0;
-}
-
-toolbarbutton {
-}
-
-.toolbarbutton-icon {
-}
+  border: 1px solid #b6b6b3;
+  border-width: 1px 0; }
 
 #back-button {
   /*
@@ -433,8 +367,7 @@ toolbarbutton {
   border-inline-start: none;
   box-shadow: none !important;
   border-radius: 0 !important;
-  */
-}
+  */ }
 
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon {
@@ -443,109 +376,89 @@ toolbarbutton {
   padding: 2px 5px;
   background: var(--chrome-nav-buttons-background);
   box-shadow: none !important;
-  border-radius: 2px;
-}
+  border-radius: 2px; }
 
 #forward-button > .toolbarbutton-icon {
   /*
   border-inline-start: none;
-  */
-}
-
+  */ }
 
 /* Override a box shadow for disabled back button */
 #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon {
   /*
   box-shadow: none !important;
-  */
-}
+  */ }
 
 #TabsToolbar, .tabbrowser-tabs, .tabs-newtab-button, .tabbrowser-tabs .tabbrowser-arrowscrollbox {
-  background: $dark_fill;
-}
+  background: #cfcfcd; }
 
 .tabbrowser-tab {
   padding: 0.5ex 0.5ex;
   font-weight: bold;
-  text-align: center;
-}
+  text-align: center; }
 
 .tabbrowser-tab:not([pinned=true]) .tab-content > * {
   /*
   display: inline;
-  */
-}
+  */ }
 
 /* Turn off favicons for unpinned tabs */
 .tabbrowser-tab:not([pinned=true]) .tab-icon-image {
-  display: none;
-}
+  display: none; }
 
 .tabbrowser-tab:not([pinned=true]) .tab-close-button {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .tabbrowser-tab:not([selected=true]) {
   background: none;
-  color: $insensitive_fg_color;
-}
+  color: #8b8e8f; }
 
 .tabbrowser-tab:not([selected=true]):hover {
-  color: mix($insensitive_fg_color, $fg_color, 50%);
-  background: transparentize($bg_color, 0.7);
-  box-shadow: 0 -2px 0 $borders_color inset !important;
-  border: 1px solid transparentize($borders_color, 0.7);
+  color: #5d6163;
+  background: rgba(232, 232, 231, 0.3);
+  box-shadow: 0 -2px 0 #b6b6b3 inset !important;
+  border: 1px solid rgba(182, 182, 179, 0.3);
   border-width: 0 1px;
   padding-left: calc(0.5ex - 1px);
-  padding-right: calc(0.5ex - 1px);
-}
+  padding-right: calc(0.5ex - 1px); }
 
 .tabbrowser-tab[selected=true] {
-  color: $fg_color !important;
-  background: transparentize($bg_color, 0.5);
-  box-shadow: 0 -2px 0 $selected_bg_color inset !important;
-  outline: 1px solid transparentize($borders_color, 0.5);
-}
+  color: #2e3436 !important;
+  background: rgba(232, 232, 231, 0.5);
+  box-shadow: 0 -2px 0 #4a90d9 inset !important;
+  outline: 1px solid rgba(182, 182, 179, 0.5); }
 
 .tabbrowser-tab[selected=true]:hover {
-  background: transparentize($bg_color, 0.3);
-}
+  background: rgba(232, 232, 231, 0.7); }
 
 #navigator-toolbox {
-  -moz-box-direction: reverse;
-}
+  -moz-box-direction: reverse; }
 
 .close-icon {
   opacity: 0.5;
-  transition: all 1s;
-}
+  transition: all 1s; }
 
 .close-icon:hover {
   opacity: 1;
   background-color: #e9e9e9;
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 16, 16, 0);
-  box-shadow: 0 0 0 1px #eee, 0 0 0 2px $borders_color;
+  box-shadow: 0 0 0 1px #eee, 0 0 0 2px #b6b6b3;
   border-radius: 2px;
-  padding: 3px;
-}
+  padding: 3px; }
 
 /* Restyle icons; look in /usr/share/icons/Adwaita for names */
-
 #back-button .toolbarbutton-icon {
   list-style-image: url("moz-icon://stock/go-previous-symbolic?size=menu") !important;
   -moz-image-region: auto;
-    padding: 6px;
-}
+  padding: 6px; }
 
 #forward-button .toolbarbutton-icon {
   list-style-image: url("moz-icon://stock/go-next-symbolic?size=menu") !important;
-  -moz-image-region: auto;
-}
+  -moz-image-region: auto; }
 
 #PanelUI-menu-button {
   list-style-image: url("moz-icon://stock/open-menu-symbolic?size=menu") !important;
-  -moz-image-region: auto;
-}
+  -moz-image-region: auto; }
 
 /*
 #downloads-button {
