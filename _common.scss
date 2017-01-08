@@ -17,39 +17,45 @@
 }
 
 :root[devtoolstheme="dark"] {
+  $variant: 'dark';
+  @import 'colors';
+
+  $c: $bg_color;
+  $_hilight_color: _button_hilight_color($c);
+
   /* Chrome */
-  --chrome-background-color: #272b35;
-  --chrome-color: #F5F7FA;
-  --chrome-secondary-background-color: #393F4C;
-  --chrome-navigator-toolbox-separator-color: #{rgba(0,0,0,.2)};
-  --chrome-nav-bar-separator-color: #{rgba(0,0,0,.2)};
-  --chrome-nav-buttons-background: #252C33;
-  --chrome-nav-buttons-hover-background: #1B2127;
-  --chrome-nav-bar-controls-border-color: #1D2328;
-  --chrome-selection-color: #fff;
-  --chrome-selection-background-color: #5675B9;
+  --chrome-background-color: #{$bg_color};
+  --chrome-color: #{$fg_color};
+  --chrome-secondary-background-color: #{$bg_color};
+  --chrome-navigator-toolbox-separator-color: #{$borders_color};
+  --chrome-nav-bar-separator-color: #{$borders_color};
+  --chrome-nav-buttons-background: #{linear-gradient(to bottom, darken($c, 2%), darken($c, 4%) 60%, darken($c, 6%))};
+  --chrome-nav-buttons-hover-background: #{linear-gradient(to bottom, lighten($c, 1%), darken($c, 2%) 60%, darken($c, 4%))};
+  --chrome-nav-bar-controls-border-color: #{$borders_color};
+  --chrome-selection-color: #{$selected_fg_color};
+  --chrome-selection-background-color: #{$selected_bg_color};
 
   /* Tabs */
-  --tabs-toolbar-color: #F5F7FA;
-  --tab-background-color: #272b35;
-  --tab-hover-background-color: #07090a;
-  --tab-selection-color: #f5f7fa;
-  --tab-selection-background-color: #5675B9;
-  --tab-selection-box-shadow: none;
-  --pinned-tab-glow: #{radial-gradient(22px at center calc(100% - 2px), rgba(76,158,217,0.9) 13%, rgba(0,0,0,0.4) 16%, transparent 70%)};
+  --tabs-toolbar-color: #{$fg_color};
+  --tab-background-color: #{$dark_fill};
+  --tab-hover-background-color: #{transparentize($bg_color, 0.8)};
+  --tab-selection-color: #{$fg_color};
+  --tab-selection-background-color: #{transparentize($bg_color, 0.5)};
+  --tab-selection-box-shadow: #{inset 0 3px $selected_bg_color};
+  --pinned-tab-glow: #{radial-gradient(22px at center calc(100% - 2px), $selected_bg_color 13%, transparent 16%)};
 
   /* Toolbar buttons */
-  --toolbarbutton-hover-background: #{rgba(25,33, 38,.6) linear-gradient(rgba(25,33,38,.6), rgba(25,33,38,.6)) padding-box};
-  --toolbarbutton-hover-boxshadow: none;
-  --toolbarbutton-hover-bordercolor: #{rgba(25,33,38,.6)};
-  --toolbarbutton-active-background: #{rgba(25,33,38,1) linear-gradient(rgba(25,33,38,1), rgba(25,33,38,1)) border-box};
-  --toolbarbutton-active-boxshadow: none;
-  --toolbarbutton-active-bordercolor: #{rgba(25,33,38,.8)};
-  --toolbarbutton-checkedhover-backgroundcolor: #3C5283;
+  --toolbarbutton-hover-background: #{linear-gradient(to bottom, lighten($c, 1%), darken($c, 2%) 60%, darken($c, 4%))};
+  --toolbarbutton-hover-boxshadow: #{inset 0 1px _button_hilight_color(darken($c, 2%))};
+  --toolbarbutton-hover-bordercolor: #{$borders_color $borders_color $alt_borders_color};
+  --toolbarbutton-active-background: #{darken($c, 6%)};
+  --toolbarbutton-active-boxshadow: #{inset 0 1px transparentize($_hilight_color, 1)};
+  --toolbarbutton-active-bordercolor: #{$borders_color};
+  --toolbarbutton-checkedhover-backgroundcolor: #{darken($c, 6%)};
 
   /* Url and search bars */
-  --url-and-searchbar-background-color: #171B1F;
-  --urlbar-separator-color: #5F6670;
+  --url-and-searchbar-background-color: #{$base_color};
+  --urlbar-separator-color: #{$bg_color};
   --urlbar-dropmarker-url: url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
   --urlbar-dropmarker-region: rect(0px, 11px, 14px, 0px);
   --urlbar-dropmarker-hover-region: rect(0, 22px, 14px, 11px);

@@ -15,35 +15,35 @@
 
 :root[devtoolstheme="dark"] {
   /* Chrome */
-  --chrome-background-color: #272b35;
-  --chrome-color: #F5F7FA;
-  --chrome-secondary-background-color: #393F4C;
-  --chrome-navigator-toolbox-separator-color: rgba(0, 0, 0, 0.2);
-  --chrome-nav-bar-separator-color: rgba(0, 0, 0, 0.2);
-  --chrome-nav-buttons-background: #252C33;
-  --chrome-nav-buttons-hover-background: #1B2127;
-  --chrome-nav-bar-controls-border-color: #1D2328;
-  --chrome-selection-color: #fff;
-  --chrome-selection-background-color: #5675B9;
+  --chrome-background-color: #33393b;
+  --chrome-color: #eeeeec;
+  --chrome-secondary-background-color: #33393b;
+  --chrome-navigator-toolbox-separator-color: #1b1f20;
+  --chrome-nav-bar-separator-color: #1b1f20;
+  --chrome-nav-buttons-background: linear-gradient(to bottom, #2e3436, #2a2e30 60%, #25292b);
+  --chrome-nav-buttons-hover-background: linear-gradient(to bottom, #353c3e, #2e3436 60%, #2a2e30);
+  --chrome-nav-bar-controls-border-color: #1b1f20;
+  --chrome-selection-color: #ffffff;
+  --chrome-selection-background-color: #215d9c;
   /* Tabs */
-  --tabs-toolbar-color: #F5F7FA;
-  --tab-background-color: #272b35;
-  --tab-hover-background-color: #07090a;
-  --tab-selection-color: #f5f7fa;
-  --tab-selection-background-color: #5675B9;
-  --tab-selection-box-shadow: none;
-  --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), rgba(76, 158, 217, 0.9) 13%, rgba(0, 0, 0, 0.4) 16%, transparent 70%);
+  --tabs-toolbar-color: #eeeeec;
+  --tab-background-color: #272c2e;
+  --tab-hover-background-color: rgba(51, 57, 59, 0.2);
+  --tab-selection-color: #eeeeec;
+  --tab-selection-background-color: rgba(51, 57, 59, 0.5);
+  --tab-selection-box-shadow: inset 0 3px #215d9c;
+  --pinned-tab-glow: radial-gradient(22px at center calc(100% - 2px), #215d9c 13%, transparent 16%);
   /* Toolbar buttons */
-  --toolbarbutton-hover-background: rgba(25, 33, 38, 0.6) linear-gradient(rgba(25, 33, 38, 0.6), rgba(25, 33, 38, 0.6)) padding-box;
-  --toolbarbutton-hover-boxshadow: none;
-  --toolbarbutton-hover-bordercolor: rgba(25, 33, 38, 0.6);
-  --toolbarbutton-active-background: #192126 linear-gradient(#192126, #192126) border-box;
-  --toolbarbutton-active-boxshadow: none;
-  --toolbarbutton-active-bordercolor: rgba(25, 33, 38, 0.8);
-  --toolbarbutton-checkedhover-backgroundcolor: #3C5283;
+  --toolbarbutton-hover-background: linear-gradient(to bottom, #353c3e, #2e3436 60%, #2a2e30);
+  --toolbarbutton-hover-boxshadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  --toolbarbutton-hover-bordercolor: #1b1f20 #1b1f20 #0b0c0c;
+  --toolbarbutton-active-background: #25292b;
+  --toolbarbutton-active-boxshadow: inset 0 1px rgba(255, 255, 255, 0);
+  --toolbarbutton-active-bordercolor: #1b1f20;
+  --toolbarbutton-checkedhover-backgroundcolor: #25292b;
   /* Url and search bars */
-  --url-and-searchbar-background-color: #171B1F;
-  --urlbar-separator-color: #5F6670;
+  --url-and-searchbar-background-color: #232729;
+  --urlbar-separator-color: #33393b;
   --urlbar-dropmarker-url: url("chrome://browser/skin/devedition/urlbar-history-dropmarker.svg");
   --urlbar-dropmarker-region: rect(0px, 11px, 14px, 0px);
   --urlbar-dropmarker-hover-region: rect(0, 22px, 14px, 11px);
